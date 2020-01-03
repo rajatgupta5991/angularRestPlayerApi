@@ -1,0 +1,121 @@
+<!-- reactive form -->
+<div class="container">
+  <div class="col-md-4 offset-4 card mt-4">
+    <ng-content select="h1"></ng-content>
+    <form [formGroup]="form">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <label for="username" class="text-danger">*</label>
+        <input
+          id="username"
+          formControlName="username"
+          type="text"
+          class="form-control mt-2"
+          placeholder="enter username"
+        />
+        <div
+          class="text-danger mt-2"
+          *ngIf="username.touched && username.invalid"
+        >
+          <p *ngIf="username.errors.required">username is required</p>
+          <p *ngIf="username.errors.minlength">
+            username should be of minimum 3 character/p>
+          </p>
+          <p *ngIf="username.errors.pattern">username is not matching</p>
+          <p *ngIf="username.errors.removeSpace">
+            username cannot containi space
+          </p>
+          <p *ngIf="username.errors.pleaseDontUseAtTheRate">
+            do not use @ symbol
+          </p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <label for="password" class="text-danger">*</label>
+        <input
+          id="password"
+          formControlName="password"
+          type="password"
+          class="form-control mt-2"
+          placeholder="enter password"
+        />
+        <div
+          class="text-danger mt-2"
+          *ngIf="password.touched && password.invalid"
+        >
+          <p *ngIf="password.errors.required">password is required</p>
+          <p *ngIf="password.errors.minlength">
+            password should be of minimum 3 character/p>
+          </p>
+          <p *ngIf="password.errors.pattern">password is not matching</p>
+        </div>
+      </div>
+      <ng-content select="button"></ng-content>
+      <ng-content select="div"></ng-content>
+    </form>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+<!-- <div class="container">
+  <div class="col-md-4 offset-4 mt-2 card">
+    <div class="card-body">
+      <h1 class="display-5 text-center text-uppercase">contact</h1>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            ngModel
+            #username="ngModel"
+            (change)="getObj(username)"
+            placeholder="enter username"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input
+            type="email"
+            id="Email"
+            name="Email"
+            ngModel
+            #Email="ngModel"
+            placeholder="enter Email"
+            class="form-control"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            ngModel
+            #password="ngModel"
+            placeholder="enter password"
+            class="form-control"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-block btn-primary" [disabled]="!form.valid">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

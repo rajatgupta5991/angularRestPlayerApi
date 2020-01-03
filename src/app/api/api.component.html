@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="col-md-8 offset-2 mt-2">
+    <div class="form-group">
+      <h1 class="display-5 mt-2 text-center">Find Players</h1>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Cricket Players"
+        #player
+        (keyup.enter)="searchPlayer(player.value)"
+      />
+    </div>
+  </div>
+  <div>
+    <ul class="list-group">
+      <li
+        class="list-group-item mt-2"
+        *ngFor="let player of playerInfo; index as i"
+      >
+        <span>{{ i + 1 }}</span>
+        <span class="badge badge-primary ml-4 mr-4">player Name : </span>
+        <span class="text-dark font-weight-bold">{{ player.fullName }}</span>
+      </li>
+    </ul>
+  </div>
+</div>

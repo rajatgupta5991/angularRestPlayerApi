@@ -1,0 +1,82 @@
+<div class="container">
+  <ul class="list-gorup">
+    <li
+      class="list-group-item mt-2"
+      rajat
+      *ngFor="let user of users"
+      [ngStyle]="{ color: user.gender === 'male' ? 'red' : 'green' }"
+    >
+      {{ user.name }}
+      {{ user.age }}
+      {{ user.gender }}
+      {{ user.country }}
+    </li>
+  </ul>
+</div>
+
+<!-- <button [ngClass]="['btn', 'btn-danger', 'mt-2']" (clilck)="(toggleState)">
+  submit
+</button>
+<div [ngClass]="toggleClass">
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi harum
+  doloremque minima incidunt est, facere dignissimos deserunt unde ea illo ullam
+  iure fugit rerum culpa at voluptatibus consequuntur quae veritatis.
+</div> -->
+
+<!-- <button [ngClass]="btn btn-dark">btn dark</button> -->
+<!--string way-->
+
+<!-- <button [ngClass]="['btn', 'btn-success']">Submit</button> -->
+<!--array way-->
+
+<!-- <button [ngClass]="{ btn: true, 'btn-danger': true }">Btn danger</button> -->
+<!--object way-->
+
+<!-- <div *ngIf="users.length > 0; then usersList; else noUsersList"></div>
+
+<ng-template #usersList>
+  <ul class="list-group">
+    <li
+      class="list-group-item mt-2"
+      *ngFor="
+        let user of users;
+        index as i;
+        even as isEven;
+        odd as isOdd;
+        first as isFirst;
+        last as isLast
+      "
+    >
+      <span class="badge badge-dark p-2 mt-2">{{ i + 1 }}</span>
+      {{ user }}
+      <span class="badge badge-success float-right" ngIf="isEven">even</span>
+      <span class="badge badge-danger float-right" ngIf="isOdd">odd</span>
+      <span class="badge badge-success float-right" ngIf="isFirst">first</span>
+      <span class="badge badge-danger float-right" ngIf="isLast">last</span>
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #noUsersList>
+  <h1 class="text-danger">
+    no users are here
+  </h1>
+</ng-template> -->
+<!-- 
+<div [hidden]="users.length == 0">users are here</div>
+<div [hidden]="users.length > 0">no users are here</div> -->
+
+<!-- <div>
+  <h1 class="text-success" *ngIf="users.length > 0">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let user of; users">{{ user }}</li>
+    </ul>
+  </h1>
+</div>
+<div>
+  <h1 class="text-danger" *ngIf="users.length == 0">
+    no users are here
+  </h1>
+</div> -->
+
+<!-- <template>You are waste and good</template> -->

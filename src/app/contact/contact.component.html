@@ -1,0 +1,194 @@
+<div class="container">
+  <div class="col-md-4 card mt-2 offset-4">
+    <form [formGroup]="contactForm">
+      <h1 class="text-center">ContactForm</h1>
+      <div class="form-group">
+        <input
+          formControlName="name"
+          type="text"
+          class="form-control"
+          placeholder="username"
+        />
+        <div class="text-danger" *ngIf="name.touched && name.invalid">
+          <p>name is required</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="email" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-block mt-2">ContactForm</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+<!-- <div class="container">
+  <div class="col-md-4 offset-4 mt-2 card">
+    <div class="card-body">
+      <h1 class="display-5 text-center text-uppercase">contact</h1>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group">
+          <label for="firstname">firstname</label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            ngModel
+            #firstname="ngModel"
+            (change)="getObj(firstname)"
+            placeholder="enter firstname"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="10"
+          />
+          <div
+            *ngIf="firstname.touched && firstname.invalid"
+            class=" text-danger mt-2"
+          >
+            <p *ngIf="firstname.errors.required">firstname is required</p>
+            <p *ngIf="firstname.errors.minlength">
+              firstname should be minimum 3 character
+            </p>
+            <p *ngIf="firstname.errors.pattern">firstname should match</p>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastname">lastname</label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            ngModel
+            #lastname="ngModel"
+            (change)="getObj(lastname)"
+            placeholder="enter lastname"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="10"
+          />
+          <div
+            *ngIf="lastname.touched && lastname.invalid"
+            class=" text-danger mt-2"
+          >
+            <p *ngIf="lastname.errors.required">lastname is required</p>
+            <p *ngIf="lastname.errors.minlength">
+              lastname should be minimum 3 character
+            </p>
+            <p *ngIf="lastname.errors.pattern">lastname should match</p>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label *ngFor="let gender of genderList">
+            <input
+              type="radio"
+              ngModel
+              name="gender"
+              value="{{ gender.name }}"
+            />
+            {{ gender.name }}
+          </label>
+        </div>
+        <div class="form-group">
+          <select name="country" class="form-control">
+            <option
+              *ngFor="let country of countryList; index as i"
+              [ngValue]="i"
+              >{{ country }}</option
+            >
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="Phone_Number">Phone Number</label>
+          <input
+            type="number"
+            id="Phone_Number"
+            name="Phone_Number"
+            ngModel
+            #Phone_Number="ngModel"
+            placeholder="enter Phone_Number"
+            class="form-control"
+            required
+            minlength="10"
+            maxlength="10"
+          />
+          <div
+            *ngIf="Phone_Number.touched && Phone_Number.invalid"
+            class=" text-danger mt-2"
+          >
+            <p *ngIf="Phone_Number.errors.required">Phone_Number is required</p>
+            <p *ngIf="Phone_Number.errors.minlength">
+              Phone_Number should be minimum 3 character
+            </p>
+            <p *ngIf="Phone_Number.errors.pattern">Phone_Number should match</p>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            type="username"
+            id="username"
+            name="username"
+            ngModel
+            #username="ngModel"
+            placeholder="enter username"
+            class="form-control"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+          <div *ngIf="username.touched && username.invalid" class=" text-danger mt-2">
+            <p *ngIf="username.errors.required">username is required</p>
+            <p *ngIf="username.errors.minlength">
+              username should be minimum 3 character
+            </p>
+            <p *ngIf="username.errors.pattern">username should match</p>
+          
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            type="username"
+            id="username"
+            name="username"
+            ngModel
+            #username="ngModel"
+            placeholder="enter username"
+            class="form-control"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            ngModel
+            #email="ngModel"
+            placeholder="enter email"
+            class="form-control"
+            required
+            minlength="5"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <button class="btn btn-block btn-primary" [disabled]="!form.valid">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

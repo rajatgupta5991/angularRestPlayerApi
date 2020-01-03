@@ -1,0 +1,73 @@
+<!-- <ul class="list-group" *ngFor="let emp of employee">
+  <li class="list-group-item mt-2">Employee_Id : {{ emp.emp_id }}</li>
+  <li class="list-group-item mt-2"><img src="{{ emp.emp_photo }}" /></li>
+  <li class="list-group-item mt-2">Employee_Name : {{ emp.emp_name }}</li>
+  <li class="list-group-item mt-2">
+    Employee_Designation : {{ emp.emp_designation }}
+  </li>
+  <li class="list-group-item mt-2">Employee_Salary : {{ emp.emp_salary }}</li>
+  <li class="list-group-item mt-2">
+    Employee_Location : {{ emp.emp_location }}
+  </li>
+  <li class="list-group-item mt-2">
+    Employee_Education : {{ emp.emp_education }}
+  </li>
+  <li class="list-group-item mt-2">
+    Employee_Date-of-Join : {{ emp.emp_doj }}
+  </li>
+</ul>
+<img [src]="ImageURL" alt="" />
+{{ isActive }}
+<button class="btn btn-danger" [class.active]="isActive">Submit</button>
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan">colspan here</td>
+    <td>colspan here</td>
+  </tr>
+</table>
+<div [style.backgroundColor]="isActive ? 'red' : 'green0'">
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, asperiores.
+</div> -->
+<!-- <button (click)="click($event)">Submit</button> -->
+<!-- <input
+  type="text"
+  name=""
+  id=""
+  class="form-control mt-2"
+  placeholder="enter username"
+  (keyup.enter)="username($event)"
+/>
+<input type="text" #email (keyup.enter)="enterEmail(email.value)" /> -->
+<!-- <input
+  type="text"
+  #username
+  class="form-control"
+  (keyup.enter)="getUsername(username.value)"
+  placeholder="enter username"
+/> -->
+
+<!-- two way data binding directives name is ngModel -->
+<input
+  type="text"
+  class="form-control mt-2"
+  placeholder="enter name"
+  [(ngModel)]="username"
+/>
+
+<input
+  type="number"
+  class="form-control mt-2"
+  placeholder="enter number"
+  [(ngModel)]="number"
+/>
+<input
+  type="email"
+  class="form-control mt-2"
+  placeholder="enter email"
+  [(ngModel)]="email"
+/>
+<h1>{{ username }}</h1>
+<h1>{{ number }}</h1>
+<h1>{{ email }}</h1>
+<!-- ngModel only works with force elements -->
+<!-- to use ngModel directive should import FormsModule in app.module.ts -->

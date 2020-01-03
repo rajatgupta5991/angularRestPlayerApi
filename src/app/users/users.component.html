@@ -1,0 +1,12 @@
+<ul class="list-group" *ngFor="let emp of user">
+  <li class="list-group-item mt-2">Employee_Id : {{ emp.id }}</li>
+  <li class="list-group-item mt-2"><img src="{{ emp.photo }}" /></li>
+  <li class="list-group-item mt-2">Employee_Name : {{ emp.name }}</li>
+  <li class="list-group-item mt-2">
+    Employee_Designation : {{ emp.designation }}
+  </li>
+  <li class="list-group-item mt-2">Employee_Salary : {{ emp.salary }}</li>
+  <li class="list-group-item mt-2">Employee_Location : {{ emp.location }}</li>
+  <li class="list-group-item mt-2">Employee_Education : {{ emp.education }}</li>
+  <li class="list-group-item mt-2">Employee_Date-of-Join : {{ emp.doj }}</li>
+</ul>

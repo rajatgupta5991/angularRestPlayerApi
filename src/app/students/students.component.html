@@ -1,0 +1,28 @@
+<div class="container">
+  <form>
+    <h1 class="display-5 text-success text-center text-uppercase">
+      Add Student into List
+    </h1>
+    <input
+      type="text"
+      class="form-control bg-light text-success"
+      placeholder="Add Studentes"
+      (keyup.enter)="addStudents(student)"
+      #student
+    />
+    <ul class="list-group">
+      <li
+        class="list-group-item mt-2"
+        *ngFor="let student of GetStudents.controls"
+      >
+        {{ student.value }}
+        <button
+          (click)="removeStudent(student)"
+          class="btn btn-danger float-right"
+        >
+          Remove
+        </button>
+      </li>
+    </ul>
+  </form>
+</div>

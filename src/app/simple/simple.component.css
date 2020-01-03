@@ -1,0 +1,9 @@
+.background{
+    background: 'green';
+    padding: 10px;
+    border: 1px solid #111;
+    box-shadow: inset 1px 1px 10px 1px #ccc;
+    color: #fff;
+    transform: scale(2);
+    transition: ease-in all 0.5s;
+}

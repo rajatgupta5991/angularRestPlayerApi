@@ -1,0 +1,105 @@
+<!-- <div class="col-md-4 offset-4 card mt-4">
+  <div class="card-body">
+    <h1 class="text-center">{{ "This is User " + login }}</h1>
+    <form>
+      <div class="form-group">
+        <label for="user-name">Username</label>
+        <input type="text" class="form-control" id="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" />
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-block btn-success">Login</button>
+      </div>
+    </form>
+  </div>
+</div> -->
+<!-- 
+<div class="container">
+  <div class="col-md-4 offset-4 mt-2 card">
+    <div class="card-body">
+      <h1 class="display-5 text-center text-uppercase">login</h1>
+      <form #form="ngForm" (ngSubmit)="submit(form)">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            ngModel
+            #username="ngModel"
+            (change)="getObj(username)"
+            placeholder="enter username"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="10"
+          />
+          <div
+            *ngIf="username.touched && username.invalid"
+            class=" text-danger mt-2"
+          >
+            <p *ngIf="username.errors.required">username is required</p>
+            <p *ngIf="username.errors.minlength">
+              username should be minimum 3 character
+            </p>
+            <p *ngIf="username.errors.pattern">username should match</p>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            ngModel
+            #password="ngModel"
+            placeholder="enter password"
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="10"
+          />
+          <div
+            *ngIf="password.touched && password.invalid"
+            class=" text-danger mt-2"
+          >
+            <p *ngIf="password.errors.required">password is required</p>
+            <p *ngIf="password.errors.minlength">
+              password should be minimum 3 character
+            </p>
+            <p *ngIf="password.errors.pattern">password should match</p>
+            
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-block" [disabled]="!form.valid">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div>
+  <form action="">
+    <div>
+      <h1>Login Here</h1>
+    </div>
+    <div>
+      <input type="text" placeholder="username" />
+    </div>
+    <div>
+      <input type="text" placeholder="password" />
+    </div>
+    <div>
+      <button>Login</button>
+    </div>
+  </form>
+</div>
